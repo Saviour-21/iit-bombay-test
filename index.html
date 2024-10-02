@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css?v=1.0" />
+    <script src="src/index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>Chemical supplies</h1>
+      <div class="action">
+        <button id="add-row-btn">
+          <img src="./src/plus-sign.png" class="plus-icon" />
+        </button>
+        <button id="move-up-btn" disabled>
+          <img src="./src/up-arrow.png" class="plus-icon" />
+        </button>
+        <button id="move-down-btn" disabled>
+          <img src="./src/down-arrow.png" class="plus-icon" />
+        </button>
+        <button id="deleteRow" disabled>
+          <img src="./src/delete.webp" alt="delete" class="delete" />
+        </button>
+        <button id="refresh-btn">
+          <img src="./src/refresh.png" alt="refresh" class="refresh" />
+        </button>
+        <button id="edit-row-btn" disabled>Edit</button>
+        <button id="save-row-btn">Save</button>
+      </div>
+    </div>
+    <table id="tableWrapper">
+      <thead id="table-header">
+        <th></th>
+        <th data-key="id">
+          <div class="th-content">
+            Id
+            <img
+              id="icon-id"
+              src="./src/sort-ascending.png"
+              class="icon hidden"
+            />
+          </div>
+        </th>
+        <th data-key="chemical_name" class="row">
+          <div class="th-content">
+            Chemical Name
+            <img
+              id="icon-chemical_name"
+              src="./src/sort-ascending.png"
+              class="icon hidden"
+            />
+          </div>
+        </th>
+        <th data-key="vender">
+          <div class="th-content">
+            Vendor
+            <img
+              id="icon-vender"
+              src="./src/sort-ascending.png"
+              class="icon hidden"
+            />
+          </div>
+        </th>
+        <th data-key="density">
+          <div class="th-content">
+            <div class="align-subtext">
+              <div class="text">Density</div>
+              <div class="subText">g/m3</div>
+            </div>
+
+            <img
+              id="icon-density"
+              src="./src/sort-ascending.png"
+              class="icon hidden"
+            />
+          </div>
+        </th>
+        <th data-key="viscosity">
+          <div class="th-content">
+            <div class="align-subtext">
+              <div class="text">Viscosity</div>
+              <div class="subText">m2/s</div>
+            </div>
+            <img
+              id="icon-viscosity"
+              src="./src/sort-ascending.png"
+              class="icon hidden"
+            />
+          </div>
+        </th>
+        <th data-key="packaging" style="display: flex">
+          <div class="th-content">
+            Packaging
+            <img
+              id="icon-packaging"
+              src="./src/sort-ascending.png"
+              class="icon hidden"
+            />
+          </div>
+        </th>
+        <th data-key="pack_size">
+          <div class="th-content">
+            Pack Size
+            <img
+              id="icon-pack_size"
+              src="./src/sort-ascending.png"
+              class="icon hidden"
+            />
+          </div>
+        </th>
+        <th data-key="unit">
+          <div class="th-content">
+            Unit
+            <img
+              id="icon-unit"
+              src="./src/sort-ascending.png"
+              class="icon hidden"
+            />
+          </div>
+        </th>
+        <th data-key="quantity">
+          <div class="th-content">
+            Quantity
+            <img
+              id="icon-quantity"
+              src="./src/sort-ascending.png"
+              class="icon hidden"
+            />
+          </div>
+        </th>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </body>
+</html>

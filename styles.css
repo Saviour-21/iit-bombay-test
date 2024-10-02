@@ -1,0 +1,233 @@
+body {
+  font-family: sans-serif;
+  background: #dedede;
+  width: 100%;
+  cursor: pointer;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.action {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  cursor: pointer;
+}
+
+table {
+  border: 2px solid darkgray;
+  padding: 15px;
+  border-collapse: collapse;
+  table-layout: auto;
+  width: 100%;
+}
+
+#table-header {
+  padding: 20px;
+  margin: -20px;
+}
+
+.align-subtext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.th-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+table td:nth-child(3),
+table th:nth-child(3) {
+  border-right: 2px solid grey;
+  white-space: nowrap;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: start;
+  word-wrap: break-word;
+}
+
+table th {
+  vertical-align: top;
+  font-size: 16px;
+}
+
+table td {
+  font-size: 14px;
+}
+
+.plus-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
+  transition: transform 0.2s;
+}
+
+.asc {
+  transform: rotate(0deg);
+}
+
+.desc {
+  transform: rotate(180deg);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.delete {
+  height: 20px;
+  width: 20px;
+}
+
+.refresh {
+  height: 25px;
+  width: 25px;
+}
+
+.text {
+  margin-bottom: 20px;
+}
+
+.subText {
+  color: grey;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.tick {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 30px;
+}
+
+.tick::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 6px;
+  height: 13px;
+  border: solid gray;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.blue-tick::before {
+  border-color: blue;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .action {
+    margin-top: 10px;
+    justify-content: space-between;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  table {
+    font-size: 12px;
+    padding: 5px;
+    width: 100%;
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+
+  table th,
+  table td {
+    padding: 8px;
+  }
+
+  table th {
+    font-size: 14px;
+  }
+
+  table td {
+    font-size: 12px;
+  }
+
+  .th-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .icon {
+    height: 15px;
+    width: 15px;
+  }
+
+  .plus-icon,
+  .delete,
+  .refresh {
+    height: 18px;
+    width: 18px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .tick {
+    width: 10px;
+    height: 20px;
+  }
+
+  .tick::before {
+    top: 12px;
+    left: 12px;
+    width: 5px;
+    height: 10px;
+  }
+}
+
+.selected {
+  background-color: #c5b4e3;
+  font-weight: bold;
+}
+
+.selected .tick::before {
+  border-color: blue;
+}
+
+button {
+  all: unset;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
