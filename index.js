@@ -126,7 +126,7 @@ function selectRow(index) {
 }
 
 function renderTable(data) {
-  tableBody.innerHTML = "";
+  if(tableBody) tableBody.innerHTML = "";
   data.forEach((item, index) => {
     const row = document.createElement("tr");
     row.setAttribute("data-index", index);
