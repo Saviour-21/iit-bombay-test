@@ -1,4 +1,4 @@
-const tableBody = document.getElementById("tableBody");
+let tableBody = document.getElementById("tableBody");
 var data = [
   {
     id: 1,
